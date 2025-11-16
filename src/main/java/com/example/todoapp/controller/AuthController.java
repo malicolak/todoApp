@@ -13,21 +13,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 @AllArgsConstructor
 public class AuthController {
-
     private final UserRepository userRepository;
-    private final BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder(12);
-
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
     @GetMapping("/login")
     public String login() {
         return "login";
     }
-
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
         return "register";
     }
-
     @PostMapping("/register")
     public String register(@ModelAttribute User user, Model model) {
         User checkUser = userRepository.findByUsername(user.getUsername());
