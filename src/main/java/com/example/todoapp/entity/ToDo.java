@@ -22,4 +22,8 @@ public class ToDo {
 
     @Column(name = "completed")
     private boolean completed;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 }
