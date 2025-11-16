@@ -17,14 +17,14 @@
         <h4>
             <i class="bi bi-calendar-check"></i>
             Time To Do
+            <a href="/logout" class="btn btn-outline-danger btn-sm btn-logout">Çıkış Yap</a>
         </h4>
-        <a href="/logout" class="btn btn-outline-danger btn-sm">Logout</a>
         <form class="d-flex mb-4 mt-4" th:action="@{/add}" method="post">
-            <input type="text" name="title" placeholder="Add your task" class="form-control todo-input" required>
-            <button class="btn btn-add">ADD<span>+</span></button>
+            <input type="text" name="title" placeholder="Yeni görev ekle" class="form-control todo-input" required>
+            <button class="btn btn-add">EKLE<span>+</span></button>
         </form>
         <div th:if="${#lists.isEmpty(todos)}" class="text-center text-muted">
-            No tasks to do
+            Henüz bir görevin yok
         </div>
         <div class="todo-list">
             <div th:each="todo : ${todos}" class="todo-item">

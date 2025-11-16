@@ -3,6 +3,7 @@
 <h3>Tech stacks :</h3>
 <ul>
 <li>Spring Boot</li>
+<li>Spring Security</li>
 <li>Thymeleaf</li>
 <li>PostgreSQL</li>
 <li>Data JPA</li>

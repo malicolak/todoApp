@@ -66,6 +66,10 @@ box-shadow: none;
     background-color: #e85c00;
 }
 
+.btn-logout{
+    margin-left: 30%;
+}
+
 .btn-add:hover {
     background-color: #e85c00;
 }
